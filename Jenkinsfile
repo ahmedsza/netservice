@@ -5,7 +5,7 @@ pipeline {
       steps {
         sh '''cd netservice
 dotnet publish --configuration release'''
-        archiveArtifacts 'netservice/bin/Release/netcoreapp2.2/publish/**.*'
+        archiveArtifacts '**/*.*'
       }
     }
   }
