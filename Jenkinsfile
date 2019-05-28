@@ -5,7 +5,12 @@ pipeline {
       steps {
         sh '''cd netservice
 dotnet publish --configuration release'''
-        archiveArtifacts '**/*.*'
+        
+      }
+    }
+    post {
+      always {
+      archiveArtifacts '**/*.*'
       }
     }
   }
