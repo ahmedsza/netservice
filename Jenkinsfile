@@ -3,7 +3,8 @@ pipeline {
   stages {
     stage('Dev') {
       steps {
-        sh 'dotnet publish --configuration release'
+        sh '''cd netservice
+dotnet publish --configuration release'''
       }
     }
   }
