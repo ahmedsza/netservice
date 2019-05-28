@@ -6,11 +6,13 @@ pipeline {
         sh '''cd netservice
 dotnet publish --configuration release'''
       }
-      }
     }
-    post {
-      always {
+  }
+  post {
+    always {
       archiveArtifacts '**/*.*'
-      }
+
     }
+
+  }
 }
